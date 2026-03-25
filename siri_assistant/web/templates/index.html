@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HeySiri Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>HeySiri</h1>
+      <p class="subtitle">Production-ready web interface for your assistant.</p>
+
+      <section id="chat" class="chat-window" aria-live="polite"></section>
+
+      <form id="chat-form" class="chat-form">
+        <input id="query" type="text" placeholder="Ask me anything..." required maxlength="4000" />
+        <button type="submit">Send</button>
+      </form>
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>
